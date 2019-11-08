@@ -1,7 +1,7 @@
  function Pizza(toppings, size) {
-   this.toppings = [],
-   this.size = size,
-   price = 0,
+   this.toppings = [];
+   this.size = size;
+   price = 0;
  }
 
 
@@ -22,7 +22,11 @@ $(document).ready(function() {
   $("#input").submit(function(event) {
     event.preventDefault();
 
-    // let
+    let toppingsArray = [];
+
+    $("input[name='topping']:checked").each(function() {
+      var physics = toppingsArray.push($(this).val());
+    })
     // array that deals with types of toppings as a category that sets their value to a specific number
 
     var q1sm = $("#q1sm").val();
@@ -32,10 +36,10 @@ $(document).ready(function() {
     var q1S = $("#q1S").val();
     var q1H = $("#q1H").val();
 
-    var yerZa = new Pizza([^^], this.size)
+    var yerZa = new Pizza(toppingsArray, this.size)
     let price = yerZa.calculate();
 
-    $("#output").text("You have selected: " + yerZa.size +  [arrayforToppings] +  "Your total is: $" + price);
+    $("#output").html("You have selected: " + yerZa.size +  [arrayforToppings] +  "Your total is: $" + price);
   });
 });
 
