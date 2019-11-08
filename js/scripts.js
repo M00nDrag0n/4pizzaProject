@@ -31,9 +31,10 @@ $(document).ready(function() {
     var q1S = $("#q1S").val();
     var q1H = $("#q1H").val();
 
-    var yerZa = new Pizzas([^^], )
+    var yerZa = new Pizza([^^], this.size)
+    let price = yerZa.calculate();
 
-
+    $("#output").text("You have selected: " + yerZa.size +  [arrayforToppings] +  "Your total is: $" + price);
   });
 });
 
