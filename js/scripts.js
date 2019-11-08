@@ -23,6 +23,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     // let
+    // array that deals with types of toppings as a category that sets their value to a specific number
 
     var q1sm = $("#q1sm").val();
     var q1m = $("#q1m").val();
