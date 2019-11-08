@@ -22,10 +22,26 @@ $(document).ready(function() {
   $("#input").submit(function(event) {
     event.preventDefault();
 
-    let 
+    // let
 
+    var q1sm = $("#q1sm").val();
+    var q1m = $("#q1m").val();
+    var q1lg = $("#q1l").val();
+    var q1Xlg = $("#q1xl").val();
+    var q1S = $("#q1S").val();
+    var q1H = $("#q1H").val();
 
+    var yerZa = new Pizzas([^^], )
 
 
   });
 });
+
+
+
+
+
+
+// var q1 = $("#q1sm").val();
+// var q1 = $("#q1sm").val();
+// var q1 = $("#q1sm").val();
