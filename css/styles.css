@@ -2,6 +2,7 @@ body {
   text-align: center;
   font-family: 'Spectral';
   font-size: 20px;
+  color: black;
 }
 
 label {
@@ -14,4 +15,11 @@ label {
 }
 
 h1 {
+}
+
+
+#output {
+  border-style: solid;
+  border-color: black;
+  border-width: medium;
 }

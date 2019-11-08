@@ -1,14 +1,14 @@
  function Pizza(toppings, size) {
-   this.toppings = [];
-   this.size = size;
-   price = 0;
+   this.toppings = [],
+   this.size = size,
+   this.price = 0;
  }
 
-
 Pizza.prototype.calculate = function () {
-  this.toppings.forEach(function(oneTopping) {
+  this.toppings.forEach(function(topping) {
     this.price +=1;
   })
+  console.log("I EXIST LOOK AT ME");
 
   if(this.size == "small") {
     this.price += 4;
