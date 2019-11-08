@@ -9,15 +9,29 @@ Pizzas.prototype.calculate = function () {
   this.toppings.forEach(function(topping) {
     this.price +=1;
   })
-
+console.log("I Also EXIST LOOK AT ME");
   if(this.size == "small") {
     this.price += 4;
-  } else {
+    console.log("I EXIST LOOK AT ME TOO", price);
+  }
+  else if (this.size == "med" ) {
+    this.price += 6;
+  }
+  else if (this.size == "lg" ) {
+    this.price += 14;
+  }
+  else if (this.size == "xl" ) {
     this.price += 20;
+  }
+  else if (this.size == "super" ) {
+    this.price += 40;
+  }
+  else if (this.size == "Homer" ) {
+    this.price += 120;
   }
   return this.price;
 };
-
+console.log("AAAAAAAAAAAAAGH", );
 $(document).ready(function() {
   $("#input").submit(function(event) {
     event.preventDefault();
@@ -39,7 +53,7 @@ $(document).ready(function() {
     var yerZa = new Pizzas(toppingsArray, this.size)
     let price = yerZa.calculate();
 
-    $("#output").html("You have selected: " + yerZa.size +  [arrayforToppings] +  "Your total is: $" + price);
+    $("#output").html("You have selected: " + yerZa.size +  toppingsArray +  "Your total is: $" + price);
   });
 });
 
