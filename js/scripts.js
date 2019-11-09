@@ -31,7 +31,7 @@ console.log("I Also EXIST LOOK AT ME");
   }
   return this.price;
 };
-console.log("AAAAAAAAAAAAAGH", );
+console.log("AAAAAAAAAAAAAGH");
 $(document).ready(function() {
   $("#input").submit(function(event) {
     event.preventDefault();
@@ -51,9 +51,10 @@ $(document).ready(function() {
     // array that deals with types of toppings as a category that sets their value to a specific number
 
     var yerZa = new Pizzas(toppingsArray, this.size)
-    let price = yerZa.calculate();
+    let yerPrice = yerZa.calculate();
 
-    $("#output").html("You have selected: " + yerZa.size +  toppingsArray +  "Your total is: $" + price);
+    $("#output").html("You have selected: " + yerZa.size +  toppingsArray +  "Your total is: $" + yerPrice);
+    console.log("WHAT IS MY ZA??!!!!", yerZa);
   });
 });
 
