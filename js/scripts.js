@@ -43,17 +43,19 @@ $(document).ready(function() {
     var q1Xlg = $("#q1xl").val();
     var q1S = $("#q1S").val();
     var q1H = $("#q1H").val();
+    var yerSize = $("#yerSizes").val();
     let toppingsArray = [];
 
     $("input[name='topping']:checked").each(function() {
       var physics = toppingsArray.push($(this).val());
-    })
+    });
     // array that deals with types of toppings as a category that sets their value to a specific number
-
-    var yerZa = new Pizzas(toppingsArray, this.size)
+    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    var yerZa = new Pizzas(toppingsArray, yerSize)
     let yerPrice = yerZa.calculate();
+    console.log("WILL YOU PLEASE CALCULATE MY PRICES WHY DO YOU DO THIS EVERY SINGLE TIME OH MY GOD.");
 
-    $("#output").html("You have selected: " + yerZa.size +  toppingsArray +  "Your total is: $" + yerPrice);
+    $("#output").html("You have selected: " + yerSize +  toppingsArray +  "Your total is: $" + yerPrice);
     console.log("WHAT IS MY ZA??!!!!", yerZa);
   });
 });
